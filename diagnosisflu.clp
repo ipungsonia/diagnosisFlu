@@ -14,7 +14,7 @@
 ; Gejala umum Flu
 (defrule gejalaUmum (Awalan yes)
     =>
-    (printout t crlf "Berikut merupakan gejala umum saat terjangkit flu: " crlf "• Batuk dan Pilek" crlf "• Sakit Tenggorokan" crlf "• Demam atau meriang" crlf "• Pegal-pegal dan kelelahan" crlf)
+    (printout t crlf "Berikut merupakan gejala umum saat terjangkit flu: " crlf "- Batuk dan Pilek" crlf "- Sakit Tenggorokan" crlf "- Demam atau meriang" crlf "- Pegal-pegal dan kelelahan" crlf)
     (printout t crlf "Apakah Anda mengalami gejala-gejala di atas?" crlf "0: Tidak" crlf "1: Ya" crlf)
 	(bind ?x (read))
         (if (= ?x 1)
@@ -28,7 +28,7 @@
 ; Gejala Flu Tipe A
 (defrule tipeA (gejalaUmum yes)
     =>
-    (printout t crlf "Berikut merupakan gejala flu Tipe A: " crlf "• Sakit Kepala" crlf "• Bersin-bersin" crlf)
+    (printout t crlf "Berikut merupakan gejala flu Tipe A: " crlf "- Sakit Kepala" crlf "- Bersin-bersin" crlf)
     (printout t crlf "Apakah Anda mengalami gejala di atas?" crlf "0: Tidak" crlf "1: Ya" crlf)
 	(bind ?x (read))
         (if (= ?x 1)
@@ -42,7 +42,7 @@
 ; Gejala Flu Tipe B
 (defrule tipeA (tipeA no)
     =>
-    (printout t crlf "Berikut merupakan gejala flu Tipe B: " crlf "• Hilang nafsu makan" crlf "• Mual dan muntah" crlf "• Kram perut" crlf)
+    (printout t crlf "Berikut merupakan gejala flu Tipe B: " crlf "• Hilang nafsu makan" crlf "- Mual dan muntah" crlf "- Kram perut" crlf)
     (printout t crlf "Apakah Anda mengalami gejala di atas?" crlf "0: Tidak" crlf "1: Ya" crlf)
 	(bind ?x (read))
         (if (= ?x 1)
@@ -56,7 +56,7 @@
 ; Gejala Flu Burung
 (defrule tipeFB (tipeB no)
     =>
-    (printout t crlf "Berikut merupakan ciri-ciri penderita Flu Burung: " crlf "• Sakit Kepala" crlf "• Sesak Napas" crlf "• Pernah berinteraksi dengan unggas" crlf)
+    (printout t crlf "Berikut merupakan ciri-ciri penderita Flu Burung: " crlf "- Sakit Kepala" crlf "- Sesak Napas" crlf "- Pernah berinteraksi dengan unggas" crlf)
     (printout t crlf "Apakah Anda mengalaminya?" crlf "0: Tidak" crlf "1: Ya" crlf)
 	(bind ?x (read))
         (if (= ?x 1)
@@ -70,7 +70,7 @@
 ; Gejala Flu Tulang
 (defrule tipeTL (tipeFB no)
     =>
-    (printout t crlf "Berikut merupakan gejala Flu Tulang: " crlf "• Sendi membengkak dan terasa sakit" crlf "• Muncul ruam di kulit" crlf "• Otot terasa sakit" crlf)
+    (printout t crlf "Berikut merupakan gejala Flu Tulang: " crlf "- Sendi membengkak dan terasa sakit" crlf "- Muncul ruam di kulit" crlf "- Otot terasa sakit" crlf)
     (printout t crlf "Apakah Anda mengalami gejala di atas?" crlf "0: Tidak" crlf "1: Ya" crlf)
 	(bind ?x (read))
         (if (= ?x 1)
